@@ -1,0 +1,15 @@
+{
+  "service": {
+    "name": "webapp ",
+    "tags": ["master"],
+    "address": "127.0.0.1",
+    "port": 27017,
+    "enableTagOverride": false,
+    "checks": [
+      {
+        "script": "curl http://localhost:3000",
+        "interval": "10s"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+version: '2'
+services:
+    consul:
+        build: consul/docker
+        links:
+            - mongo
+            - web
+        ports:
+            - "8500:8500"
+    mongo:
+        build: mongo/docker
+    web:
+        build: web/docker
+        ports:
+            - "3000:3000"

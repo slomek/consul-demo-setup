@@ -1,0 +1,15 @@
+{
+  "service": {
+    "name": "mongo",
+    "tags": ["master"],
+    "address": "127.0.0.1",
+    "port": 3000,
+    "enableTagOverride": false,
+    "checks": [
+      {
+        "script": "mongo --eval \"db.runCommand( { serverStatus: 1 } )\"",
+        "interval": "10s"
+      }
+    ]
+  }
+}
